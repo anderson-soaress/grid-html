@@ -4,41 +4,236 @@
 }
 
 .grid-container{
+    font-family: Arial, Helvetica, sans-serif;
     height: 800px;
     display: grid;
-    grid-template: 1fr 3fr / 1fr 3fr;
-}
-
-.grid-container div{
-    border: solid 1px black;
-}
-
-.grid-section{
-    display: grid;
-    grid-template: 1fr 3fr/ 1fr;
+    grid-template: 1fr 3fr / 0.5fr 3fr;
 }
 
 .side-bar{
     grid-area: 1 / 1 / 3 / 2;
     display: grid;
-    grid-template: 1fr 4fr 2fr / 1fr;
-    gap: 80px;
+    grid-template: 0.5fr 1fr 3fr / 1fr;
+    background-color: #111827;
+}
+
+.logo{
+    display:flex;
+    padding: 20px;
+    gap: 10px;
+}
+
+.logo h1{
+    font-size: 30px;
+    padding-top: 10px;
+    color: white;
+}
+
+.logo img{
+    width: 50px;
+    height: 50px;
+}
+
+.side-bar ul{
+    list-style-type: none;
+    padding: 30px;
+}
+
+.side-bar li {
+    margin: 10px 0px;
+}
+.nav-items a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav-items img{
+    height: 20px;
+    width: 20px;
+    padding-right: 20px;
 }
 
 .header{
     display: grid;
-    grid-template: 1fr 2fr / 3fr 1fr;
+    grid-template: 1fr 2fr / 3fr 2fr;
+    position: relative;
+    z-index: 10;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.search{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 40px;
+    gap: 20px;
+}
+
+#search-bar{
+    background-color: #d1d5db;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 20px;
+    width: 600px;
+    height: 15px;
+}
+
+.search img{
+    width: 25px;
+    height: 25px;
+}
+
+.user-info{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    padding-left: 40px;
+    font-weight: bold;
+}
+
+.user-info img{
+    width: 100px;
+    height: 100px;
 }
 
 .nav-buttons{
+    padding-top: 10px;
     grid-area: 1 / 2 / 3 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 30px;
+    padding-right: 40px;
+}
+
+.perfil-buttons{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-weight: bold;
+}
+
+.perfil-button{
+    width: 50px;
+    height: 50px;
+}
+
+.action-button{
+    font-weight: bold;
+    color: white;
+    background-color: #111827;
+    padding:10px;
+    height: 40px;
+    width: 80px;
+    border-radius: 20px;
+    border: none;
+    margin: 0px 15px;
 }
 
 .content {
     display :grid;
-    grid-template: 1fr 1fr / 3fr 1fr;
+    grid-template: 1fr 1fr / 4fr 2fr;
+    background-color: #d1d5db;
 }
 
 .projects{
+    padding: 30px 20px;
     grid-area: 1 / 1 / 3 / 2;
+}
+
+.projects-grid{
+    height: 800px;
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr;
+    gap: 30px;
+    padding: 10px 0px;
+}
+
+.project{
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.project-content{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px 25px;
+}
+
+.project-descrition{
+    width: 100%;
+    height: 50%;
+}
+
+.icons{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.project-border{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: orange;
+    height: 100%;
+    width: 2%;
+}
+
+.announcements{
+    padding: 30px 20px;
+}
+
+.announcements-grid{
+    margin-top: 10px;
+    height: 300px;
+    display: grid;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 30px;
+}
+
+.announcement{
+    border-bottom: solid 1px rgb(201, 201, 201);
+    padding : 10px 0px;
+}
+
+.trending{
+    padding: 30px 20px;
+}
+
+.trending-grid{
+    margin-top: 10px;
+    height: 283px;
+    display: grid;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 10px 30px;
+}
+
+.trend{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.trend span{
+    color: gray;
+}
+
+.trending img{
+    width: 60px;
+    height: 60px;
 }
